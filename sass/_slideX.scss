@@ -1,0 +1,147 @@
+.slides {
+  padding: 0;
+  max-width: 1125px;
+  height: 680px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slides * {
+  user-select: none;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  //   width: 609px;
+  //   height: 420px;
+  display: block;
+  position: absolute;
+
+  transform: scale(0);
+
+  transition: all 0.7s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav label {
+  width: auto;
+  height: 0;
+  display: none;
+  position: absolute;
+
+  /* 	  opacity: 0; */
+  z-index: 9;
+  cursor: pointer;
+
+  transition: opacity 0.2s;
+
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+  font-family: "Varela Round", sans-serif;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.nav .next:hover,
+.nav .prev:hover {
+  color: red;
+}
+
+.nav .next {
+  text-align: end;
+  top: 500px;
+  right: 50px;
+}
+
+.nav .prev {
+  text-align: start;
+  top: 500px;
+  left: 700px;
+}
+
+.prev:after,
+.next:after {
+  position: relative;
+  content: "";
+  width: 60px;
+  height: 1px;
+  display: block;
+  cursor: pointer;
+  bottom: 0;
+  margin-top: 8px;
+  background-color: rgba(157, 164, 189, 0.6);
+  background-size: auto;
+}
+
+.prev:hover:after,
+.prev:focus:after {
+  background-color: red;
+}
+
+.next:hover:after,
+.next:focus:after {
+  background-color: red;
+}
+
+input:checked + .slide-container .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+.nav-dots {
+  padding: 0 15px;
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: inline-block;
+  position: absolute;
+  text-align: end;
+}
+
+.nav-dots .nav-dot {
+  top: -440px;
+  width: 8px;
+  height: 2px;
+  margin-bottom: 12px;
+  position: relative;
+
+  display: block;
+  background-color: #fff;
+  text-align: end;
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: green;
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3 {
+  width: 18px;
+  height: 2px;
+  background: red;
+}
