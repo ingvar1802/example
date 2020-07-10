@@ -161,15 +161,15 @@ button {
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    height: 609px;
-    width: 680px;
+    width: 609px;
+    height: 680px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero-container {
-    height: 1125px;
-    width: 680px;
+    width: 1125px;
+    height: 680px;
   }
 }
 
@@ -186,15 +186,15 @@ button {
 
 @media screen and (min-width: 768px) {
   .panel {
-    height: 609px;
-    width: 680px;
+    width: 609px;
+    height: 680px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .panel {
-    height: 1125px;
-    width: 680px;
+    width: 1125px;
+    height: 680px;
   }
 }
 
