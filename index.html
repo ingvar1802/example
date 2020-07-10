@@ -5,16 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
-    <div>
-      <a href="./hero-slider.html">Слайдер (Hero)</a>
-    </div>
 
-    <script src="./js/menu.js"></script>
+  <body>
+    <section class="hero">
+      <div class="hero-container">
+        <!-- Кнопки слайдера -->
+        <button class="prev-button button-sl">Назад</button>
+        <button class="next-button button-sl">Вперед</button>
+        <!-- Дот-линии -->
+        <div class="nav-dots">
+          <div class="nav-dot" data-slide="1"></div>
+          <div class="nav-dot" data-slide="2"></div>
+          <div class="nav-dot" data-slide="3"></div>
+        </div>
+        <!-- Слайды + текст -->
+        <ul>
+          <li class="panel" data-slide="1">
+            <img
+              class="slides"
+              srcset="
+                ./images/hero/Desk/heroDesk3.jpg    1x,
+                ./images/hero/Desk/heroDesk3@2x.jpg 2x,
+                ./images/hero/Desk/heroDesk3@3x.jpg 3x
+              "
+              src="./images/hero/Desk/heroDesk3.jpg"
+              alt="Борода"
+            />
+
+            <div class="hero-text">
+              <p class="topic">A hair salon for men in Kyiv</p>
+              <h1 class="title">BarberShop</h1>
+              <p class="description">
+                Мы эксперты в модных мужских стрижках. Работаем быстро,
+                осторожно и со вкусом.
+              </p>
+            </div>
+          </li>
+          <li class="panel" data-slide="2">
+            <img
+              class="slides"
+              srcset="
+                ./images/hero/Desk/heroDesk2.jpg    1x,
+                ./images/hero/Desk/heroDesk2@2x.jpg 2x,
+                ./images/hero/Desk/heroDes2@3x.jpg  3x
+              "
+              src="./images/hero/Desk/heroDesk2.jpg"
+              alt="Борода"
+            />
+
+            <div class="hero-text">
+              <p class="topic">A hair salon for men in Kyiv</p>
+              <h1 class="title">BarberShop</h1>
+              <p class="description">
+                Мы эксперты в модных мужских стрижках. Работаем быстро,
+                осторожно и со вкусом.
+              </p>
+            </div>
+          </li>
+          <li class="panel" data-slide="3">
+            <img
+              class="slides"
+              srcset="
+                ./images/hero/Desk/heroDesk1.jpg    1x,
+                ./images/hero/Desk/heroDesk1@2x.jpg 2x,
+                ./images/hero/Desk/heroDesk1@3x.jpg 3x
+              "
+              src="./images/hero/Desk/heroDesk1.jpg"
+              alt="Борода"
+            />
+
+            <div class="hero-text">
+              <p class="topic">A hair salon for men in Kyiv</p>
+              <h1 class="title">BarberShop</h1>
+              <p class="description">
+                Мы эксперты в модных мужских стрижках. Работаем быстро,
+                осторожно и со вкусом.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

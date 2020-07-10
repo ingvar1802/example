@@ -1,4 +1,4 @@
-$(".container").each(function () {
+$(".hero-container").each(function () {
   var $slider = $(this);
   var numberOfSlides = $slider.find(".panel").length;
 
