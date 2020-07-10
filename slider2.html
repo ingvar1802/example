@@ -2,19 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - A Pen by simon</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-    />
+    <title>Slider</title>
+
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
-    <!-- partial:index.partial.html -->
-    <div class="wrapper">
-      <div class="prev-btn">Назад</div>
-      <div class="next-btn">Вперед</div>
+    <div class="container">
+      <button class="prev-button button-sl">Назад</button>
+      <button class="next-button button-sl">Вперед</button>
 
       <div class="nav-dots">
         <div class="nav-dot" data-slide="1"></div>
@@ -23,33 +19,24 @@
       </div>
 
       <div class="panel" data-slide="1">
-        <div class="trans-layer" id="layer-1"></div>
-        <section class="section" id="section-1">
-          <div class="section-content">
-            <img
-              class="slides"
-              src="./images/slide1.jpg"
-              style="width: 100%;"
-            />
-          </div>
-        </section>
+        <div>
+          <img class="slides" src="./images/slide1.jpg" style="width: 100%;" />
+        </div>
       </div>
       <div class="panel" data-slide="2">
-        <div class="trans-layer" id="layer-2"></div>
-        <section class="section" id="section-2">
-          <div class="section-content">
+        
+          <div>
             <img
               class="slides"
               src="./images/slide2.jpg"
               style="width: 100%;"
             />
           </div>
-        </section>
+        
       </div>
       <div class="panel" data-slide="3">
-        <div class="trans-layer" id="layer-3"></div>
-        <section class="section" id="section-3">
-          <div class="section-content">
+        
+          <div>
             <img
               class="slides"
               src="./images/slide3.jpg"
@@ -60,7 +47,6 @@
       </div>
     </div>
 
-    <!-- partial -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="./script.js"></script>
   </body>

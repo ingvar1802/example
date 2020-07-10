@@ -9,7 +9,7 @@ body {
   height: 100%;
 }
 
-.wrapper {
+.container {
   position: relative;
   top: 0;
   width: 1125px;
@@ -30,84 +30,10 @@ body {
   right: 0;
   margin: auto;
 }
+
 .panel._active {
   z-index: 10;
 }
-
-// .trans-layer,
-// .section {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-// }
-
-// .trans-layer {
-//   background: #000;
-//   -webkit-transform: translateY(-100%) skew(0) rotate(0) scale(2);
-//   transform: translateY(-100%) skew(0) rotate(0) scale(2);
-//   border-radius: 50%;
-//   -webkit-transition: all 500ms ease-in-out;
-//   transition: all 500ms ease-in-out;
-//   -webkit-transition-delay: 500ms;
-//   transition-delay: 500ms;
-// }
-// ._active .trans-layer {
-//   -webkit-transform: translateY(0) skew(0) rotate(0) scale(2);
-//   transform: translateY(0) skew(0) rotate(0) scale(2);
-//   -webkit-transition-delay: 0ms;
-//   transition-delay: 0ms;
-// }
-
-// .section {
-//   -webkit-transform: translateY(100%);
-//   transform: translateY(100%);
-//   -webkit-transition: all 500ms ease-in-out;
-//   transition: all 500ms ease-in-out;
-//   -webkit-transition-delay: 0ms;
-//   transition-delay: 0ms;
-//   background: #343434;
-// }
-// ._active .section {
-//   -webkit-transform: translateY(0);
-//   transform: translateY(0);
-//   -webkit-transition-delay: 500ms;
-//   transition-delay: 500ms;
-// }
-
-// .section-content {
-//   display: -webkit-box;
-//   display: flex;
-//   -webkit-box-orient: vertical;
-//   -webkit-box-direction: normal;
-//   flex-flow: column;
-//   width: 100%;
-//   height: 100%;
-//   -webkit-box-pack: center;
-//   justify-content: center;
-//   -webkit-box-align: center;
-//   align-items: center;
-//   color: #fff;
-//   font-family: arial;
-//   text-transform: uppercase;
-//   opacity: 0;
-//   -webkit-transform: translateY(30px);
-//   transform: translateY(30px);
-//   -webkit-transition: all 500ms ease;
-//   transition: all 500ms ease;
-//   -webkit-transition-delay: 0s;
-//   transition-delay: 0s;
-// }
-// ._active .section-content {
-//   opacity: 1;
-//   -webkit-transform: translateY(0px);
-//   transform: translateY(0px);
-//   -webkit-transition-delay: 1000ms;
-//   transition-delay: 1000ms;
-// }
 
 .nav-dots {
   position: absolute;
@@ -126,67 +52,70 @@ body {
 
   background: #9da4bd;
   cursor: pointer;
-  //   -webkit-transition: all 300ms ease-out;
-  //   transition: all 300ms ease-out;
 }
 .nav-dot.active {
   background: #fff;
   width: 18px;
 }
 
-.next-btn,
-.prev-btn {
+.button-sl {
+  border: none;
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  z-index: 20;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
 
-  color: rgba(157, 164, 189, 0.6);
-  line-height: 30px;
-
-  font-size: 11px;
   cursor: pointer;
+
+  background-color: transparent;
+  color: rgba(157, 164, 189, 0.6);
 }
 
-.next-btn {
-  top: 90%;
-  right: 5%;
-  transform: translateY(-90%);
-}
-
-.prev-btn {
-  top: 90%;
-  right: 20%;
-  transform: translateY(-90%);
-}
-
-.prev-btn:hover,
-.next-btn:hover,
-.prev-btn:focus,
-.next-btn:focus {
+.button-sl:hover,
+.button-sl:focus,
+.button-sl:active {
   color: #fff;
+  outline: none;
 }
 
-.prev-btn:after,
-.next-btn:after {
+.prev-button {
+  text-align: start;
+  position: absolute;
+  top: 85%;
+  left: 60%;
+  transform: translate(0%, -50%);
+  z-index: 20;
+}
+
+.next-button {
+  text-align: end;
+  position: absolute;
+  top: 85%;
+  right: 10%;
+  transform: translate(0%, -50%);
+  z-index: 20;
+}
+
+.prev-button:after,
+.next-button:after {
   content: "";
   width: 60px;
   height: 1px;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   bottom: 0;
-
+  margin-top: 8px;
   background-color: rgba(157, 164, 189, 0.6);
   background-size: auto;
 }
 
-.prev-btn:hover:after,
-.prev-btn:focus:after {
+.prev-button:hover:after,
+.prev-button:focus:after {
   background-color: #fff;
 }
 
-.next-btn:hover:after,
-.next-btn:focus:after {
+.next-button:hover:after,
+.next-button:focus:after {
   background-color: #fff;
 }
