@@ -72,6 +72,7 @@
 /* дот-линии*/
 .nav-dots {
   position: absolute;
+  display: block;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
@@ -80,13 +81,17 @@
 }
 
 .nav-dot {
+  display: block;
   width: 8px;
   height: 2px;
-  margin-top: 12px;
-
   background: #9da4bd;
   cursor: pointer;
 }
+
+.nav-dot:not(:first-child) {
+  margin-top: 12px;
+}
+
 .nav-dot.active {
   background: #fff;
   width: 18px;
