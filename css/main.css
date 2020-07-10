@@ -213,13 +213,42 @@ button {
 /* дот-линии*/
 .nav-dots {
   position: absolute;
-  display: block;
   top: 50%;
-  right: 10px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 20;
   width: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-dots {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    right: 39px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-dots {
+    right: 55px;
+  }
 }
 
 .nav-dot {
@@ -247,6 +276,23 @@ button {
   height: 189px;
   padding-top: 208px;
   padding-left: 31px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-text {
+    width: 355px;
+    height: 163px;
+    padding-top: 272px;
+    padding-left: 120px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-text {
+    width: 500px;
+    height: 202px;
+    padding-left: 100px;
+  }
 }
 
 .hero .topic {
@@ -332,21 +378,45 @@ button {
 .prev-button {
   text-align: start;
   position: absolute;
-  top: 85%;
-  left: 60%;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
   z-index: 20;
 }
 
+@media screen and (min-width: 768px) {
+  .prev-button {
+    bottom: 40px;
+    right: 147px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .prev-button {
+    bottom: 40px;
+    right: 163px;
+  }
+}
+
 .next-button {
   text-align: end;
   position: absolute;
-  top: 85%;
-  right: 10%;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
   z-index: 20;
+}
+
+@media screen and (min-width: 768px) {
+  .next-button {
+    bottom: 40px;
+    right: 39px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .next-button {
+    bottom: 40px;
+    right: 55px;
+  }
 }
 
 .prev-button:after,
