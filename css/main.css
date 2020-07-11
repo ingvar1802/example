@@ -170,29 +170,6 @@ button {
   }
 }
 
-.sidebar {
-  text-align: center;
-}
-
-@media screen and (max-width: 767px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar {
-    display: block;
-    width: 159px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .sidebar {
-    width: 155px;
-  }
-}
-
 .hero-container {
   position: relative;
   top: 0;
@@ -200,7 +177,7 @@ button {
   height: 580px;
   margin-left: auto;
   margin-right: auto;
-  background: black;
+  background: #191c26;
   overflow: hidden;
 }
 
@@ -310,7 +287,7 @@ button {
 }
 
 .nav-dot.active {
-  background: #fff;
+  background: #ffffff;
   width: 18px;
 }
 
@@ -353,11 +330,6 @@ button {
   text-transform: uppercase;
   overflow: hidden;
   text-align: start;
-}
-
-.topic span {
-  display: inline-block;
-  vertical-align: middle;
 }
 
 .topic:before {
@@ -430,7 +402,7 @@ button {
 .button-sl:hover,
 .button-sl:focus,
 .button-sl:active {
-  color: #fff;
+  color: #ffffff;
   outline: none;
 }
 
@@ -493,11 +465,88 @@ button {
 
 .prev-button:hover:after,
 .prev-button:focus:after {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .next-button:hover:after,
 .next-button:focus:after {
-  background-color: #fff;
+  background-color: #ffffff;
+}
+
+/* Сайдбар */
+.sidebar {
+  background-color: #ffffff;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+    width: 159px;
+    height: 680px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .sidebar {
+    width: 155px;
+  }
+}
+
+.aside-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 270px;
+  position: absolute;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+@media screen and (min-width: 768px) {
+  .aside-block {
+    left: 76px;
+    bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .aside-block {
+    left: 82px;
+  }
+}
+
+.aside-link {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+}
+
+.aside-link:hover span,
+.aside-link:focus span {
+  color: #ff6c00;
+}
+
+.aside-line {
+  margin-right: 40px;
+}
+
+.aside-line:before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
 }
 /*# sourceMappingURL=main.css.map */

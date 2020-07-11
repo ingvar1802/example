@@ -13,7 +13,17 @@
 
   <body>
     <div class="wrapper">
-      <aside class="sidebar">Hello</aside>
+      <aside class="sidebar">
+        
+        <ul class="aside-block">
+          <li>
+            <a class="aside-link aside-line" href="#"><span>Instagram</span></a>
+          </li>
+          <li>
+            <a class="aside-link" href="#"><span>Youtube</span></a>
+          </li>
+        </ul>
+      </aside>
       <div class="hero-container">
         <!-- Кнопки слайдера -->
         <button class="prev-button button-sl">Назад</button>
@@ -31,6 +41,7 @@
           </svg>
         </div>
         <!-- Слайды + текст -->
+        <div class="overlay">
         <ul>
           <li class="panel" data-slide="1">
             <img
@@ -63,7 +74,7 @@
               "
               src="./images/hero/Desk/heroDesk2.jpg"
               alt="Борода"
-            />
+            /> 
 
             <div class="hero-text">
               <p class="topic">A hair salon for men in Kyiv</p>
@@ -75,7 +86,7 @@
             </div>
           </li>
           <li class="panel" data-slide="3">
-            <img
+           <img
               class="slides"
               srcset="
                 ./images/hero/desk/heroDesk1.jpg    1x,
@@ -84,7 +95,7 @@
               "
               src="./images/hero/Desk/heroDesk1.jpg"
               alt="Борода"
-            />
+            /> 
 
             <div class="hero-text">
               <p class="topic">A hair salon for men in Kyiv</p>
@@ -96,6 +107,7 @@
             </div>
           </li>
         </ul>
+        </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
