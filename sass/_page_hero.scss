@@ -33,13 +33,13 @@
   }
 }
 
-.overlay {
+.slider-overlay {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.overlay:after {
+.slider-overlay:after {
   content: "";
   position: absolute;
   background: rgba(25, 28, 38, 0.2);
@@ -47,7 +47,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 15;
+  z-index: 2;
 }
 
 .panel {
@@ -78,7 +78,7 @@
 }
 
 .panel._active {
-  z-index: 10;
+  z-index: 1;
 }
 
 /* дот-линии*/
@@ -87,7 +87,7 @@
   top: 50%;
 
   transform: translateY(-50%);
-  z-index: 20;
+  z-index: 3;
   width: 40px;
 
   @media screen and (max-width: 767px) {
@@ -132,7 +132,7 @@
   height: 189px;
   padding-top: 208px;
   padding-left: 31px;
-  z-index: 20;
+  z-index: 1;
 
   @media screen and (min-width: 768px) {
     width: 355px;
@@ -148,7 +148,7 @@
   }
 }
 
-.hero-text .topic {
+.hero-text .hero-topic {
   margin-top: 0px;
   margin-bottom: 20px;
   padding: 0px;
@@ -165,7 +165,7 @@
   text-align: start;
 }
 
-.topic:before {
+.hero-topic:before {
   content: "";
   display: inline-block;
   margin-right: 20px;
@@ -175,7 +175,7 @@
   background-color: $headerColor;
 }
 
-.hero-text .title {
+.hero-text .hero-title {
   margin-top: 0px;
   margin-bottom: 20px;
   padding: 0px;
@@ -191,7 +191,7 @@
   }
 }
 
-.description {
+.hero-description {
   color: $tertiaryTextColor;
   font-size: 16px;
   font-weight: 400;
@@ -243,7 +243,7 @@
   position: absolute;
 
   transform: translate(0%, -50%);
-  z-index: 20;
+  z-index: 3;
 
   @media screen and (min-width: 768px) {
     right: 119px;
@@ -260,7 +260,7 @@
   position: absolute;
 
   transform: translate(0%, -50%);
-  z-index: 20;
+  z-index: 3;
 
   @media screen and (min-width: 768px) {
     right: 33px;
@@ -324,7 +324,7 @@
 
   @media screen and (min-width: 768px) {
     left: 76px;
-    bottom: 40px;
+    bottom: 27px;
   }
 
   @media screen and (min-width: 1280px) {
