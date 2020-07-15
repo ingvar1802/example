@@ -251,7 +251,7 @@ button {
 }
 
 .trans-layer,
-.section {
+.panel-trans {
   position: absolute;
   width: 100%;
   height: 100%;
