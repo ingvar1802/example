@@ -158,14 +158,14 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 768px;
+    max-width: 768px;
     height: 680px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .wrapper {
-    width: 1280px;
+    max-width: 1280px;
     height: 680px;
   }
 }
@@ -261,39 +261,38 @@ button {
   right: 0;
 }
 
-.trans-layer {
-  background: #000;
-  -webkit-transform: translateY(-100%) skew(0) rotate(0) scale(2);
-          transform: translateY(-100%) skew(0) rotate(0) scale(2);
-  border-radius: 50%;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
-}
-
-._active .trans-layer {
-  -webkit-transform: translateY(0) skew(0) rotate(0) scale(2);
-          transform: translateY(0) skew(0) rotate(0) scale(2);
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
-}
-
-.panel-trans {
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-transition-delay: 0ms;
-          transition-delay: 0ms;
-  background: #343434;
-}
-
-._active .panel-trans {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition-delay: 500ms;
-          transition-delay: 500ms;
+@media screen and (min-width: 768px) {
+  .trans-layer {
+    background: #000;
+    -webkit-transform: translateY(-100%) skew(0) rotate(0) scale(2);
+            transform: translateY(-100%) skew(0) rotate(0) scale(2);
+    border-radius: 50%;
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
+  ._active .trans-layer {
+    -webkit-transform: translateY(0) skew(0) rotate(0) scale(2);
+            transform: translateY(0) skew(0) rotate(0) scale(2);
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+  .panel-trans {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+    background: #343434;
+  }
+  ._active .panel-trans {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transition-delay: 500ms;
+            transition-delay: 500ms;
+  }
 }
 
 /* дот-линии*/
